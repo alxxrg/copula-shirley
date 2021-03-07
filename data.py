@@ -3,7 +3,6 @@ TRAIN_DATASETS = {
     'adult': './Datasets/adult.csv',
     'compas': './Datasets/compas.csv',
     'texas_hospital': './Datasets/texas_hospital.csv',
-    'nyc_taxi': './Datasets/nyc_taxi.csv',
 }
 
 # attributes specification
@@ -28,12 +27,5 @@ DATASET_CONFIGS = {
         'binary_classif_label': 'ETHNICITY',
         'multi_classif_label': 'TYPE_OF_ADMISSION',
         'linearreg_label': 'TOTAL_CHARGES',
-    },
-    'nyc_taxi': {
-        'datetime': ['pickup_datetime', 'dropoff_datetime'],
-        'categorical': [],
-        'binary_classif_label': None,
-        'multi_classif_label': None,
-        'linearreg_label': 'trip_duration',
     },
 }
