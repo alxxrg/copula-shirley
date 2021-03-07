@@ -25,7 +25,7 @@ Gambs, Sébastien, Ladouceur, Frédéric, Laurent, Antoine and Roy-Gaumond, Alex
 
 #### Parameters for main.py
 ```python
---dataset, default='adult', choices=list(TRAIN_DATASETS.keys()) #Input dataset ('adult', 'compas' or 'texas_hospital')
+--dataset, default='adult' #Input dataset ('adult', 'compas' or 'texas_hospital')
 --model, default='cop-shirl', choices=['cop-shirl', 'privbayes', 'dpcopula', 'dp-histogram'] #Generative model to use
 --seed, type=int, default=76543
 --n-sample, type=int, default=None #Number of synthetic samples to generate
@@ -50,7 +50,7 @@ Gambs, Sébastien, Ladouceur, Frédéric, Laurent, Antoine and Roy-Gaumond, Alex
 #### Parameters for crossval.py
 ```python
 --n-folds, type=int, default=5 #The number of folds for k-fold cross-validation
---dataset, default='adult', choices=list(TRAIN_DATASETS.keys()) #Input dataset ('adult', 'compas' or 'texas_hospital')
+--dataset, default='adult' #Input dataset ('adult', 'compas' or 'texas_hospital')
 --model, default='cop-shirl', choices=['cop-shirl', 'privbayes', 'dpcopula', 'dp-histogram'] #Generative model to use
 --seed, type=int, default=76543
 --n-sample, type=int, default=None #Number of synthetic samples to generate
