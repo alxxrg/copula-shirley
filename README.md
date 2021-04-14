@@ -19,15 +19,19 @@ Gambs, S., Ladouceur, F., Laurent, A. and Roy-Gaumond, A., 2021. Growing synthet
 - rpy2 (3.4.2)
 
 ### Example of setting the conda environnement
-0. You might have to add conda-forge as a channel:
+0.a. With conda installed, create a new environnement (here we named it copulashirley):
+```conda create -n copulashirley```
+0.b. Activate the environnement:
+```conda activate copulashirley```
+0.c. You might have to add conda-forge as a channel for the following commands:
 ```conda config --add channels conda-forge```
-1. In the conda env. first install r-base with the following command:
+1. In the copulashirley environnement first install r-base with the following command:
 ```conda install r-base=4.0.3```
-2. Run the R CLI in the conda:
+2. Run the R CLI in the conda by running:
 ```R```
-3. Install the rvinecopulib package and dependencies:
+3. In the R CLI, install the rvinecopulib package and dependencies with the command:
 ```install.packages('rvinecopulib')```
-4. Quit the R CLI and in the conda env. install the Python packages with the following command:
+4. Quit the R CLI and in the copulashirley environnement install the Python packages with the following command:
 ```conda install numpy=1.19.5 scipy=1.6.0 pandas=1.2.1 scikit-learn=0.24.1 category_encoders=2.2.2 diffprivlib=0.4.0 xgboost=1.3.0 rpy2=3.4.2```
 
 
