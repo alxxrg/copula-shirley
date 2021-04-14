@@ -109,9 +109,9 @@ if __name__ == '__main__':
                                         )
         print('================ Sampling from Vine Copula Model ================')
         if categorical_encoder == 'OHE':
-            synth_samples = GetSamplesFromVineOHE(rvine_struct, n_sample=n_sample, col_names=kf_train.columns, decoder=decoder, dp_ecdfs=dp_ecdfs, constant_cols=constant_cols, constant_vals=constant_vals, vine_cores=n_cores)
+            synth_samples = GetSamplesFromVineOHE(rvine_struct, n_sample=n_sample, col_names=clean_data.columns, decoder=decoder, dp_ecdfs=dp_ecdfs, constant_cols=constant_cols, constant_vals=constant_vals, vine_cores=n_cores)
         else:
-            synth_samples = GetSamplesFromVine(rvine_struct, n_sample=n_sample, col_names=kf_train.columns, dp_ecdfs=dp_ecdfs, vine_cores=n_cores)
+            synth_samples = GetSamplesFromVine(rvine_struct, n_sample=n_sample, col_names=clean_data.columns, dp_ecdfs=dp_ecdfs, vine_cores=n_cores)
     if model == 'privbayes':
         clean_data.to_csv(f'./temp/temp_{dataset}.csv', index=False)
         synth_samples = PrivBayes(dataset, num_to_generate=n_sample, dp_eps=dp_epsilon, degree_max=privbayes_degree_max, seed=seed)
