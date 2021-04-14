@@ -1,9 +1,13 @@
 # COPULA-SHIRLEY
 Implementation for the COPULA-SHIRLEY framework for differerentially-private synthetic data generation. This implementation is used on the following paper:
 
-Gambs, Sébastien, Ladouceur, Frédéric, Laurent, Antoine and Roy-Gaumond, Alexandre. “Growing synthetic data through differentially-private vine copulas”, Proceedings on Privacy Enhancing Technologies (PETS), vol. XXXX, no. X, XXXX. (URL)
+Gambs, S., Ladouceur, F., Laurent, A. and Roy-Gaumond, A., 2021. Growing synthetic data through differentially-private vine copulas. Proceedings on Privacy Enhancing Technologies, 3, pp.122-141. https://www.petsymposium.org/2021/files/papers/issue3/popets-2021-0040.pdf
 
-## Requirements 
+## Requirements
+### R
+- r-base (4.0.3)
+- rvinecopulib (0.5.5.1.1) 
+
 ### Python
 - numpy (1.19.5)
 - scipy (1.6.0)
@@ -14,9 +18,18 @@ Gambs, Sébastien, Ladouceur, Frédéric, Laurent, Antoine and Roy-Gaumond, Alex
 - xgboost (1.3.0)
 - rpy2 (3.4.2)
 
-### R
-- r-base (4.0.3)
-- rvinecopulib (0.5.5.1.1) 
+### Example of setting the conda environnement
+0. You might have to add conda-forge as a channel:
+```conda config --add channels conda-forge```
+1. In the conda env. first install r-base with the following command:
+```conda install r-base=4.0.3```
+2. Run the R CLI in the conda:
+```R```
+3. Install the rvinecopulib package and dependencies:
+```install.packages('rvinecopulib')```
+4. Quit the R CLI and in the conda env. install the Python packages with the following command:
+```conda install numpy=1.19.5 scipy=1.6.0 pandas=1.2.1 scikit-learn=0.24.1 category_encoders=2.2.2 diffprivlib=0.4.0 xgboost=1.3.0 rpy2=3.4.2```
+
 
 ## How-to
 - To output synthetic data: run main.py
