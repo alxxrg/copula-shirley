@@ -117,7 +117,7 @@ if __name__ == '__main__':
         Path(tmp_file_path).touch(exist_ok=True)
         clean_data.to_csv(tmp_file_path, index=False)
         synth_samples = PrivBayes(dataset, num_to_generate=n_sample, dp_eps=dp_epsilon, degree_max=privbayes_degree_max, seed=seed)
-        synth_samples.drop('id', axis=1, inplace=True)
+        synth_samples.drop('id', axis=1, inplace=True, errors='ignore')
     if model == 'dpcopula':
         clean_data.round(5).to_csv(f'./temp/temp_{dataset}.csv', index=False)
         synth_samples = DPCopula(dataset, dp_eps=dp_epsilon)
